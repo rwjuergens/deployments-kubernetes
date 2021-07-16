@@ -1,0 +1,3 @@
+resources:
+  - ./;kibana_deployment.yaml
+  - ./;kibana_svc.yaml
