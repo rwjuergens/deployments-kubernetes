@@ -1,4 +1,4 @@
-namePrefix: BAI-
+namePrefix: bai-
 
 resources:
 - bokeh_demo.yaml
