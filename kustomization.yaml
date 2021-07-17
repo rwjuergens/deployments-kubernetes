@@ -1,4 +1,0 @@
-bases:
-- ./bokeh-demo
-- ./elk
-- ./kibana
