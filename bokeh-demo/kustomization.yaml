@@ -3,5 +3,7 @@ namePrefix: bai-
 resources:
 - bokeh_demo.yaml
 - bokeh_svc.yaml
+
 apiVersion: kustomize.config.k8s.io/v1beta1
+
 kind: Kustomization
