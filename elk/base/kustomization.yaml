@@ -1,0 +1,4 @@
+resources:
+- elasticsearch_svc.yaml
+- es-sts-deployment.yaml
+- es-svc-loadbalancer.yaml
