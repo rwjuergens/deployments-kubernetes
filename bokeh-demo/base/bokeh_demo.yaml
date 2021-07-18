@@ -35,7 +35,13 @@ spec:
         - containerPort: 8888
           name: jupyterlab
           protocol: TCP
-        resources: {}
+        resources:
+          limits:
+            cpu: "2"
+            memory: 2Gi
+          requests:
+            cpu: "1"
+            memory: 2Gi
         securityContext:
           allowPrivilegeEscalation: false
           privileged: false
