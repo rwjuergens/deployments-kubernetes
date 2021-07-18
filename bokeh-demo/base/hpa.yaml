@@ -2,6 +2,7 @@ apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
   name: bokeh-demo-hpa
+  namespace: bokeh-demo
 spec:
   scaleTargetRef:
   apiVersion: apps/v1
