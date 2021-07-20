@@ -2,3 +2,4 @@ resources:
 - bokeh_demo.yaml
 - bokeh_svc.yaml
 - regcred.yaml
+- pvc.yaml
