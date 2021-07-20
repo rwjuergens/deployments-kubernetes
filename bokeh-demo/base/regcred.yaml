@@ -4,5 +4,4 @@ data:
 kind: Secret
 metadata:
   name: regcred
-  namespace: bokeh-demo
 type: kubernetes.io/dockerconfigjson
