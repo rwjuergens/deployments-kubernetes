@@ -3,7 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   annotations:
   finalizers:
-  - kubernetes.io/pvc-protection
   labels:
     cattle.io/creator: norman
   name: bokeh-demo-s
@@ -13,5 +12,3 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: local-path
-  volumeMode: Filesystem
