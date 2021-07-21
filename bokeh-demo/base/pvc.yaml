@@ -9,14 +9,9 @@ metadata:
   name: bokeh-demo-s
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   resources:
     requests:
       storage: 1Gi
   storageClassName: local-path
   volumeMode: Filesystem
-status:
-  accessModes:
-  - ReadWriteOnce
-  capacity:
-    storage: 1Gi
