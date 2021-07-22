@@ -4,7 +4,7 @@ metadata:
   name: bokeh-demo
   namespace: bokeh
 spec:
-  maxReplicas: 5
+  maxReplicas: 1
   minReplicas: 1
   scaleTargetRef:
     apiVersion: apps/v1
