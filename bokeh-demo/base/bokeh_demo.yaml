@@ -61,6 +61,6 @@ spec:
       volumes:
       - name: vol1
         persistentVolumeClaim:
-          claimName: bokeh-demo-s
+          claimName: nfs-pv
       imagePullSecrets:
       - name: regcred
