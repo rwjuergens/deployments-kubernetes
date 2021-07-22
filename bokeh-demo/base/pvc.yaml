@@ -1,14 +1,18 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
-  annotations:
-  finalizers:
-  labels:
-    cattle.io/creator: norman
-  name: bokeh-demo-s
+  name: nfs-pv
 spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
   accessModes:
-  - ReadWriteMany
-  resources:
-    requests:
-      storage: 1Gi
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  storageClassName: nfs
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: /bokeh-data
+    server: 192.168.0.45
