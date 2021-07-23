@@ -74,7 +74,6 @@ spec:
           mountPath: /usr/share/elasticsearch/data
         - name: elasticsearch-config
           mountPath: /usr/share/elasticsearch/config/
-          subPath: elasticsearch.yml
       volumes:
         - name: elasticsearch-config
           configMap:
