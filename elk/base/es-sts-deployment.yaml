@@ -80,7 +80,7 @@ spec:
             name: es-config
             items:
               - key: elasticsearch.yml
-                path: elasticsearch.yml
+                path: elasticsearch
   volumeClaimTemplates:
   - metadata:
       name: es-data
