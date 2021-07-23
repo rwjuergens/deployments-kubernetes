@@ -1,3 +1,3 @@
 resources:
 - elasticsearch_statefulset.yaml
-- es-svc-loadbalancer.yaml
+- elasticsearch_svc.yaml
