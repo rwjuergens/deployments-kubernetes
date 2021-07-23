@@ -9,4 +9,6 @@ spec:
   - name: http
     port: 80
     targetPort: 9200
+  externalIps:
+    - 192.168.0.210
   type: LoadBalancer
