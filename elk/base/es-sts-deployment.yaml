@@ -90,11 +90,3 @@ spec:
       resources:
         requests:
           storage: 10Gi
-  - metadata:
-      name: elasticsearch-config
-    spec:
-      storageClassName: "nfs"
-      accessModes: [ "ReadWriteMany" ]
-      resources:
-        requests:
-          storage: 10Gi
