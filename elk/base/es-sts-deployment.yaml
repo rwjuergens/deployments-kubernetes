@@ -86,8 +86,8 @@ spec:
   - metadata:
       name: es-data
     spec:
+      storageClassName: "nfs"
       accessModes: [ "ReadWriteMany" ]
-      storageClass: nfs
       resources:
         requests:
           storage: 10Gi
