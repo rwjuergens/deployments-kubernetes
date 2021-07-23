@@ -4,7 +4,7 @@ metadata:
   name: elasticsearch-loadbalancer
 spec:
   selector:
-    app: es-cluster
+    app: elasticsearch
   ports:
   - name: http
     port: 9200
