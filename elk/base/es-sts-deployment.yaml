@@ -73,7 +73,7 @@ spec:
         - name: es-data
           mountPath: /usr/share/elasticsearch/data
         - name: elasticsearch-config
-          mountPath: /usr/share/elasticsearch/config/elasticsearch.yml
+          mountPath: /usr/share/elasticsearch/config/
           subPath: elasticsearch.yml
       volumes:
         - name: elasticsearch-config
