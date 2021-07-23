@@ -15,3 +15,4 @@ spec:
       name: inter-node
   externalIPs:
     - 192.168.0.210
+  type: LoadBalancer
