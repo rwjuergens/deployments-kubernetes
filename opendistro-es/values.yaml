@@ -269,10 +269,10 @@ elasticsearch:
       ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
       ##   GKE, AWS & OpenStack)
       ##
-      # storageClass: "-"
+      storageClass: "nfs"
       accessModes:
-        - ReadWriteOnce
-      size: 8Gi
+        - ReadWriteMany
+      size: 10Gi
       annotations: {}
 
     resources: {}
@@ -346,10 +346,10 @@ elasticsearch:
       ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
       ##   GKE, AWS & OpenStack)
       ##
-      # storageClass: "-"
+      storageClass: "nfs"
       accessModes:
-        - ReadWriteOnce
-      size: 8Gi
+        - ReadWriteMany
+      size: 10Gi
       annotations: {}
 
     resources: {}
