@@ -13,7 +13,7 @@
 
 # @formatter:off
 {{- if and .Values.elasticsearch.client.podDisruptionBudget.enabled .Values.elasticsearch.client.enabled .Values.elasticsearch.client.dedicatedPod.enabled }}
-apiVersion: policy/v1
+apiVersion: policy/v1beta1/podsecuritypolicy
 kind: PodDisruptionBudget
 metadata:
   name: {{ template "opendistro-es.fullname" . }}-client-pdb
