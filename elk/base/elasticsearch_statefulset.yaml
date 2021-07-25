@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
- name: elasticsearch-logging
+ name: elasticsearch
  namespace: kube-logging
 spec:
  serviceName: elasticsearch
- replicas: 3
+ replicas: 1
  selector:
    matchLabels:
      app: elasticsearch
@@ -40,9 +40,9 @@ spec:
              fieldRef:
                fieldPath: metadata.name
          - name: discovery.seed_hosts
-           value: "elasticsearch-logging.elasticsearch"
+           value: "elasticsearch.elasticsearch"
          - name: cluster.initial_master_nodes
-           value: "elasticsearch-logging"
+           value: "elasticsearch"
          - name: ES_JAVA_OPTS
            value: "-Xms1024m -Xmx1024m"
      initContainers:
