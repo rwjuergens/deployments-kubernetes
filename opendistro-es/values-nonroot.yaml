@@ -95,6 +95,8 @@ kibana:
   service:
     type: ClusterIP
     annotations: {}
+    externalIPs:
+      - 192.168.0.210
 
   config: {}
     ## Default Kibana configuration from kibana-docker.
@@ -271,10 +273,10 @@ elasticsearch:
       ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
       ##   GKE, AWS & OpenStack)
       ##
-      # storageClass: "-"
+      storageClass: "nfs"
       accessModes:
-        - ReadWriteOnce
-      size: 8Gi
+        - ReadWriteMany
+      size: 10Gi
       annotations: {}
 
     resources: {}
@@ -348,10 +350,10 @@ elasticsearch:
       ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
       ##   GKE, AWS & OpenStack)
       ##
-      # storageClass: "-"
+      storageClass: "nfs"
       accessModes:
-        - ReadWriteOnce
-      size: 8Gi
+        - ReadWriteMany
+      size: 10Gi
       annotations: {}
 
     resources: {}
@@ -538,7 +540,7 @@ elasticsearch:
 
   maxMapCount: 262144
 
-  image: amazon/opendistro-for-elasticsearch
+  image: b177y/opendistro-for-elasticsearch
   imageTag: 1.13.1
   ## Specifies the image pull policy. Can be "Always" or "IfNotPresent" or "Never".
   ## Default to "Always".

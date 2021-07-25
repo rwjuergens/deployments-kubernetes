@@ -210,7 +210,7 @@ elasticsearch:
   ## Set optimal sysctl's. This requires privilege. Can be disabled if
   ## the system has already been preconfigured.
   sysctl:
-    enabled: true
+    enabled: false
 
   ## Give SYS_CHROOT cap to ES pods. This might not be neccesary
   sys_chroot:

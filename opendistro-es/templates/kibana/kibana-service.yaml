@@ -28,6 +28,8 @@ spec:
   - name: kibana-svc
     port: {{ .Values.kibana.externalPort }}
     targetPort: {{ .Values.kibana.port }}
+  externalIPs:
+    - 192.168.0.210
   selector:
     role: kibana
   type: {{ .Values.kibana.service.type }}

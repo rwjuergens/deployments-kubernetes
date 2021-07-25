@@ -16,7 +16,7 @@ spec:
    spec:
      containers:
      - name: elasticsearch
-       image: pestotoast/elasticsearch-armhf
+       image: elasticsearch
        resources:
            limits:
              cpu: 1000m
