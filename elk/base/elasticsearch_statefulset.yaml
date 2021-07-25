@@ -40,9 +40,9 @@ spec:
              fieldRef:
                fieldPath: metadata.name
          - name: discovery.seed_hosts
-           value: "es-logging.elasticsearch"
+           value: "es-logging-0.elasticsearch"
          - name: cluster.initial_master_nodes
-           value: "es-logging"
+           value: "es-logging-0.elasticsearch"
          - name: ES_JAVA_OPTS
            value: "-Xms1024m -Xmx1024m"
      initContainers:
