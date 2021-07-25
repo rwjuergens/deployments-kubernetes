@@ -40,9 +40,9 @@ spec:
              fieldRef:
                fieldPath: metadata.name
          - name: discovery.seed_hosts
-           value: "elasticsearch.elasticsearch"
+           value: "elasticsearch-0,elasticsearch-1,elasticsearch-2"
          - name: cluster.initial_master_nodes
-           value: "elasticsearch"
+           value: "elasticsearch-0"
          - name: ES_JAVA_OPTS
            value: "-Xms1024m -Xmx1024m"
      initContainers:
