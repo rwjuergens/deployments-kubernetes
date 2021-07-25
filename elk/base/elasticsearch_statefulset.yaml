@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
- name: elasticsearch
+ name: es-logging
  namespace: kube-logging
 spec:
  serviceName: elasticsearch
@@ -40,9 +40,9 @@ spec:
              fieldRef:
                fieldPath: metadata.name
          - name: discovery.seed_hosts
-           value: "elasticsearch-0.elasticsearch.kube-logging.svc.cluster.local,elasticsearch-1.elasticsearch.kube-logging.svc.cluster.local,elasticsearch-2.elasticsearch.kube-logging.svc.cluster.local"
+           value: "es-logging.elasticsearch"
          - name: cluster.initial_master_nodes
-           value: "elasticsearch-0.elasticsearch.kube-logging.svc.cluster.local"
+           value: "es-logging"
          - name: ES_JAVA_OPTS
            value: "-Xms1024m -Xmx1024m"
      initContainers:
