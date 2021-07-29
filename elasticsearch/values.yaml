@@ -64,8 +64,8 @@ hostAliases: []
 #  - "foo.local"
 #  - "bar.local"
 
-image: "livingdocs/elasticsearch"
-imageTag: "6.8.13"
+image: "elasticsearch"
+imageTag: "7.13.4"
 imagePullPolicy: "IfNotPresent"
 
 podAnnotations: {}
