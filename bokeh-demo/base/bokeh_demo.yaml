@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - image: blechritter/kubernetes:bokeh-demo
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: bokeh-demo
         ports:
         - containerPort: 8888
