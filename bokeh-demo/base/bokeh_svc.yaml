@@ -8,7 +8,7 @@ spec:
  ports:
  - port: 8889
    protocol: TCP
-   targetPort: 8888
+   targetPort: 8889
  selector:
    k8s-app: bokeh-demo
  externalIPs:
