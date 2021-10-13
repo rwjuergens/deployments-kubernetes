@@ -3,4 +3,3 @@ resources:
 - bokeh_svc.yaml
 - regcred.yaml
 - pvc.yaml
-- hpa.yaml
