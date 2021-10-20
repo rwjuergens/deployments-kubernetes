@@ -51,7 +51,7 @@ spec:
         terminationMessagePolicy: File
         tty: true
         volumeMounts:
-        - mountPath: /root
+        - mountPath: /notebooks
           name: vol1
       dnsPolicy: ClusterFirst
       restartPolicy: Always
