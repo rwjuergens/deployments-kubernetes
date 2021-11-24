@@ -28,14 +28,17 @@ kibanaConfig:
       key: /usr/share/kibana/config/certs/tls.key
       certificate: /usr/share/kibana/config/certs/tls.crt
     # xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
-    # elasticsearch.ssl:
-    #   certificateAuthorities: /usr/share/kibana/config/certs/elastic-certificate.pem
+    elasticsearch.ssl:
+      certificateAuthorities: /usr/share/kibana/config/ca/elastic-certificate.pem
       verificationMode: certificate
 
 secretMounts:
   - name: elastic-certificates
     secretName: elastic-certificates
     path: /usr/share/kibana/config/certs
+  - name: elastic-ca
+    secretName: elastic-ca
+    path: /usr/share/kibana/config/ca
 
 
 # Allows you to load environment variables from kubernetes secret or config map
