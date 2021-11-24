@@ -30,7 +30,7 @@ esMajorVersion: ""
 # such as elasticsearch.yml and log4j2.properties
 esConfig: 
   elasticsearch.yml: |
-    xpack.security.enabled: false
+    xpack.security.enabled: true
     cluster.name: "elasticsearch"
     network.host: 0.0.0.0
 
