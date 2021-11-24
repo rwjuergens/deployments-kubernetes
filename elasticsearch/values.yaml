@@ -57,11 +57,11 @@ envFrom: []
 # A list of secrets and their paths to mount inside the pod
 # This is useful for mounting certificates for security and for mounting
 # the X-Pack license
-secretMounts: []
-# - name: elastic-certificates
-#   secretName: elastic-certificates
-#   path: /usr/share/elasticsearch/data/certs
-#  defaultMode: 0755
+secretMounts: 
+- name: elastic-certificates
+  secretName: elastic-certificates
+  path: /usr/share/elasticsearch/data/certs
+  defaultMode: 0755
 
 hostAliases: []
 #- ip: "127.0.0.1"
@@ -137,14 +137,14 @@ persistence:
     enabled: false
   annotations: {}
 
-extraVolumes: 
-- name: certs
-  emptyDir: {}
+extraVolumes: []
+# - name: certs
+#   emptyDir: {}
 
-extraVolumeMounts: 
-- name: certs
-  mountPath: /usr/share/elasticsearch/data/certs
-  readOnly: false
+extraVolumeMounts: []
+# - name: certs
+#   mountPath: /usr/share/elasticsearch/data/certs
+#   readOnly: false
 
 extraContainers: []
   # - name: do-something
