@@ -143,13 +143,13 @@ persistence:
   annotations: {}
 
 extraVolumes: []
-# - name: elastic-certificates
-#   emptyDir: {}
-
-extraVolumeMounts: []
-# - name: elastic-certificates
-#   mountPath: /usr/share/elasticsearch/data/certs
-#   readOnly: false
+  # - name: elastic-certificates
+  #   emptyDir: {}
+  
+extraVolumeMounts: 
+  - name: elastic-certificates
+    mountPath: /usr/share/elasticsearch/data/certs
+    readOnly: true
 
 extraContainers: []
   # - name: do-something
