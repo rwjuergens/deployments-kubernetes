@@ -66,7 +66,7 @@ secretMounts:
   - name: elastic-certificates
     secretName: elastic-certificates
     path: /usr/share/elasticsearch/data/certs
-    defaultMode: 0750
+    defaultMode: 0755
 
 hostAliases: []
 #- ip: "127.0.0.1"
@@ -146,10 +146,10 @@ extraVolumes: []
   # - name: elastic-certificates
   #   emptyDir: {}
   
-extraVolumeMounts: 
-  - name: elastic-certificates
-    mountPath: /usr/share/elasticsearch/data/certs
-    readOnly: true
+extraVolumeMounts: []
+#  - name: elastic-certificates
+#    mountPath: /usr/share/elasticsearch/data/certs
+#    readOnly: true
 
 extraContainers: []
   # - name: do-something
