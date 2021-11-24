@@ -30,8 +30,8 @@ esMajorVersion: ""
 # such as elasticsearch.yml and log4j2.properties
 esConfig: 
   elasticsearch.yml: |
-    xpack.security.enabled: true
-    xpack.security.transport.ssl.enabled: true
+    xpack.security.enabled: false
+    xpack.security.transport.ssl.enabled: false
     xpack.security.transport.ssl.verification_mode: certificate 
     xpack.security.transport.ssl.client_authentication: required
     xpack.security.transport.ssl.keystore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
@@ -62,11 +62,11 @@ envFrom: []
 # A list of secrets and their paths to mount inside the pod
 # This is useful for mounting certificates for security and for mounting
 # the X-Pack license
-secretMounts: 
-  - name: elastic-certificates
-    secretName: elastic-certificates
-    path: /usr/share/elasticsearch/data/certs
-    defaultMode: 0755
+secretMounts: {}
+#  - name: elastic-certificates
+#    secretName: elastic-certificates
+#    path: /usr/share/elasticsearch/data/certs
+#    defaultMode: 0755
 
 hostAliases: []
 #- ip: "127.0.0.1"
