@@ -65,7 +65,7 @@ envFrom: []
 secretMounts: 
 - name: elastic-certificates
   secretName: elastic-certificates
-  path: /usr/share/elasticsearch/data
+  path: /usr/share/elasticsearch/data/certs
   defaultMode: 0755
 
 hostAliases: []
@@ -142,12 +142,12 @@ persistence:
     enabled: false
   annotations: {}
 
-extraVolumes: []
-# - name: certs
+extraVolumes: 
+- name: elastic-certificates
 #   emptyDir: {}
 
 extraVolumeMounts: []
-# - name: certs
+# - name: elastic-certificates
 #   mountPath: /usr/share/elasticsearch/data/certs
 #   readOnly: false
 
