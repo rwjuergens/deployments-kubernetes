@@ -209,7 +209,7 @@ service:
   type: ClusterIP
   nodePort: ""
   annotations: {}
-  httpPortName: https
+  httpPortName: http
   transportPortName: transport
   loadBalancerIP: ""
   loadBalancerSourceRanges: []
@@ -312,7 +312,7 @@ networkPolicy:
   ## Example for default configuration to access transport port:
   ## elasticsearch-master-transport-client: "true"
 
-  https:
+  http:
     enabled: false
     ## if explicitNamespacesSelector is not set or set to {}, only client Pods being in the networkPolicy's namespace
     ## and matching all criteria can reach the DB.
