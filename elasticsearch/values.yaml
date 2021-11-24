@@ -32,10 +32,10 @@ esConfig:
   elasticsearch.yml: |
     xpack.security.enabled: false
     xpack.security.transport.ssl.enabled: false
-    xpack.security.transport.ssl.verification_mode: certificate 
-    xpack.security.transport.ssl.client_authentication: required
-    xpack.security.transport.ssl.keystore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
-    xpack.security.transport.ssl.truststore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
+    # xpack.security.transport.ssl.verification_mode: certificate 
+    # xpack.security.transport.ssl.client_authentication: required
+    # xpack.security.transport.ssl.keystore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
+    # xpack.security.transport.ssl.truststore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
     cluster.name: "elasticsearch"
     network.host: 0.0.0.0
 
@@ -147,9 +147,9 @@ extraVolumes: []
   #   emptyDir: {}
   
 extraVolumeMounts: []
-#  - name: elastic-certificates
-#    mountPath: /usr/share/elasticsearch/data/certs
-#    readOnly: true
+  #  - name: elastic-certificates
+  #    mountPath: /usr/share/elasticsearch/data/certs
+  #    readOnly: true
 
 extraContainers: []
   # - name: do-something
