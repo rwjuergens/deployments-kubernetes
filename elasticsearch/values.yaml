@@ -79,6 +79,9 @@ secretMounts:
     secretName: elastic-certificates
     path: /usr/share/elasticsearch/config/certs
     defaultMode: 0750
+  - name: elastic-ca
+    secretName: elastic-ca
+    path: /usr/share/elasticsearch/config
 
 hostAliases: []
 #- ip: "127.0.0.1"
