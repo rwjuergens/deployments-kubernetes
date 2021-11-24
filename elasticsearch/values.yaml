@@ -146,10 +146,10 @@ extraVolumes: []
 # - name: certs
 #   emptyDir: {}
 
-extraVolumeMounts: 
-- name: certs
-  mountPath: /usr/share/elasticsearch/data/certs
-  readOnly: false
+extraVolumeMounts: []
+# - name: certs
+#   mountPath: /usr/share/elasticsearch/data/certs
+#   readOnly: false
 
 extraContainers: []
   # - name: do-something
