@@ -138,13 +138,13 @@ persistence:
   annotations: {}
 
 extraVolumes: 
-  - name: certs
-    emptyDir: {}
+- name: certs
+  emptyDir: {}
 
-extraVolumeMounts: []
-  # - name: extras
-  #   mountPath: /usr/share/extras
-  #   readOnly: true
+extraVolumeMounts: 
+- name: certs
+  mountPath: /usr/share/certs
+  readOnly: false
 
 extraContainers: []
   # - name: do-something
