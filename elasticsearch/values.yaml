@@ -142,8 +142,8 @@ persistence:
     enabled: false
   annotations: {}
 
-extraVolumes: 
-- name: elastic-certificates
+extraVolumes: []
+# - name: elastic-certificates
 #   emptyDir: {}
 
 extraVolumeMounts: []
