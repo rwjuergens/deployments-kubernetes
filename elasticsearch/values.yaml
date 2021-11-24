@@ -65,7 +65,7 @@ envFrom: []
 secretMounts: 
 - name: elastic-certificates
   secretName: elastic-certificates
-  path: /usr/share/elasticsearch/data/certs
+  path: /usr/share/elasticsearch/data
   defaultMode: 0755
 
 hostAliases: []
