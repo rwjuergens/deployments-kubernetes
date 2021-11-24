@@ -36,6 +36,7 @@ esConfig:
     xpack.security.transport.ssl.client_authentication: required
     xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/certs/tls.key
     xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/certs/tls.crt
+    xpack.security.transport.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/elastic-stack-ca.p12
     cluster.name: "elasticsearch"
     network.host: 0.0.0.0
 
