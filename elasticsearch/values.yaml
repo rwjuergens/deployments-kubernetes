@@ -31,11 +31,11 @@ esMajorVersion: ""
 esConfig: 
   elasticsearch.yml: |
     xpack.security.enabled: false
-    xpack.security.transport.ssl.enabled: false
-    # xpack.security.transport.ssl.verification_mode: certificate 
-    # xpack.security.transport.ssl.client_authentication: required
-    # xpack.security.transport.ssl.keystore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
-    # xpack.security.transport.ssl.truststore.path: /usr/elasticsearch/data/certs/elastic-certificates.p12
+    xpack.security.transport.ssl.enabled: true
+    xpack.security.transport.ssl.verification_mode: certificate 
+    xpack.security.transport.ssl.client_authentication: required
+    xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/certs/tls.key
+    xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/certs/tls.crt
     cluster.name: "elasticsearch"
     network.host: 0.0.0.0
 
@@ -65,7 +65,7 @@ envFrom: []
 secretMounts: 
   - name: elastic-certificates
     secretName: elastic-certificates
-    path: /usr/elasticsearch/config/certs
+    path: /usr/share/elasticsearch/config/certs
     defaultMode: 0750
 
 hostAliases: []
