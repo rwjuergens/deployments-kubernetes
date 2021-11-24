@@ -31,6 +31,8 @@ esMajorVersion: ""
 esConfig: 
   elasticsearch.yml: |
     xpack.security.enabled: true
+    cluster.name: "docker-cluster"
+    network.host: 0.0.0.0
 
 #  elasticsearch.yml: |
 #    key:
