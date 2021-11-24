@@ -305,7 +305,7 @@ lifecycle: {}
 sysctlInitContainer:
   enabled: true
 
-keystore: []
+# keystore: []
 
 networkPolicy:
   ## Enable creation of NetworkPolicy resources. Only Ingress traffic is filtered for now.
