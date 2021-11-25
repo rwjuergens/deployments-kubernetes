@@ -49,7 +49,8 @@ secretMounts:
     path: /usr/share/kibana/config/ca
   - name: kibana-keystore
     secretName: kibana-keystore
-    path: /usr/share/kibana/data/kibana.keystore
+    path: /usr/share/kibana/config/kibana.keystore
+    subPath: kibana.keystore
 
 
 # Allows you to load environment variables from kubernetes secret or config map
