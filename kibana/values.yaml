@@ -41,13 +41,13 @@ extraEnvs:
 kibanaConfig:
   kibana.yml: |
     elasticsearch.username: "elastic"
-    server.ssl:
-      enabled: true
-      key: /usr/share/kibana/config/certs/elastic-certificates.pem
-      certificate: /usr/share/kibana/config/certs/elastic-certificates.pem
-    elasticsearch.ssl:
-      certificateAuthorities: /usr/share/kibana/config/certs/elastic-certificates.pem
-      verificationMode: certificate
+    # server.ssl:
+    #   enabled: true
+    #   key: /usr/share/kibana/config/certs/elastic-certificates.pem
+    #   certificate: /usr/share/kibana/config/certs/elastic-certificates.pem
+    # elasticsearch.ssl:
+    #   certificateAuthorities: /usr/share/kibana/config/certs/elastic-certificates.pem
+    #   verificationMode: certificate
     xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
     xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_SO_KEY}
     xpack.reporting.encryptionKey: ${KIBANA_REPORT_KEY}
