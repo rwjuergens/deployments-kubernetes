@@ -24,20 +24,20 @@ extraEnvs:
 kibanaConfig:
   kibana.yml: |
     server.ssl:
-      enabled: true
-      key: /usr/share/kibana/config/certs/elastic-certificate.pem
-      certificate: /usr/share/kibana/config/certs/elastic-certificate.pem
+      enabled: false
+      key: /usr/share/kibana/config/certs/elastic-certificates.p12
+      certificate: /usr/share/kibana/config/certs/elastic-certificates.p12
     # xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
     elasticsearch.ssl:
-      certificateAuthorities: /usr/share/kibana/config/ca/elastic-ca.pem
+      certificateAuthorities: /usr/share/kibana/config/ca/elastic-stack-ca.p12
       verificationMode: certificate
 
 secretMounts:
-  - name: elastic-certificates-pem
+  - name: elastic-certificates
     secretName: elastic-certificates
     path: /usr/share/kibana/config/certs
   - name: elastic-ca
-    secretName: elastic-ca-pem
+    secretName: elastic-ca
     path: /usr/share/kibana/config/ca
 
 
