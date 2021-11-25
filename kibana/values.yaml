@@ -68,8 +68,9 @@ hostAliases: []
 #  - "foo.local"
 #  - "bar.local"
 
-image: "diamol/kibana"
-imageTag: "linux-arm"
+# image: "diamol/kibana"
+image: "kibana"
+imageTag: "7.13.4"
 imagePullPolicy: "IfNotPresent"
 
 # additionals labels
