@@ -10,11 +10,6 @@ extraEnvs:
   - name: "NODE_OPTIONS"
     value: "--max-old-space-size=1800"
     extraEnvs:
-  - name: 'ELASTICSEARCH_USERNAME'
-    valueFrom:
-      secretKeyRef:
-        name: elastic-credentials
-        key: username
   - name: 'ELASTICSEARCH_PASSWORD'
     valueFrom:
       secretKeyRef:
@@ -40,6 +35,7 @@ extraEnvs:
 
 kibanaConfig:
   kibana.yml: |
+    elasticsearch.username: "kibana_system"
     xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
     xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_SO_KEY}
     xpack.reporting.encryptionKey: ${KIBANA_REPORT_KEY}
@@ -51,6 +47,9 @@ secretMounts:
   - name: elastic-ca
     secretName: elastic-ca
     path: /usr/share/kibana/config/ca
+  - name: kibana-keystore
+    secretName: kibana-keystore
+    path: /usr/share/kibana/data/kibana.keystore
 
 
 # Allows you to load environment variables from kubernetes secret or config map
