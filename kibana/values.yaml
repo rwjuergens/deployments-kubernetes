@@ -24,7 +24,19 @@ extraEnvs:
     valueFrom:
       secretKeyRef:
         name: kibana-encryption-key
-        key: key
+        key: key.txt
+  - name: 'KIBANA_SO_KEY'
+    valueFrom:
+      secretKeyRef:
+        name: kibana-encryption-key
+        key: so-key.txt
+  - name: 'KIBANA_REPORT_KEY'
+    valueFrom:
+      secretKeyRef:
+        name: kibana-encryption-key
+        key: r-key.txt
+
+
 
 kibanaConfig:
   kibana.yml: |
@@ -32,7 +44,9 @@ kibanaConfig:
       enabled: false
       key: /usr/share/kibana/config/certs/elastic-certificates.p12
       certificate: /usr/share/kibana/config/certs/elastic-certificates.p12
-    xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
+      xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
+      xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_SO_KEY}
+      xpack.reporting.encryptionKey: ${KIBANA_REPORT_KEY}
     elasticsearch.ssl:
       certificateAuthorities: /usr/share/kibana/config/ca/elastic-stack-ca.p12
       verificationMode: certificate
