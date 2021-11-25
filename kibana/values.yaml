@@ -40,16 +40,9 @@ extraEnvs:
 
 kibanaConfig:
   kibana.yml: |
-    server.ssl:
-      enabled: false
-      key: /usr/share/kibana/config/certs/elastic-certificates.p12
-      certificate: /usr/share/kibana/config/certs/elastic-certificates.p12
-      xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
-      xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_SO_KEY}
-      xpack.reporting.encryptionKey: ${KIBANA_REPORT_KEY}
-    elasticsearch.ssl:
-      certificateAuthorities: /usr/share/kibana/config/ca/elastic-stack-ca.p12
-      verificationMode: certificate
+    xpack.security.encryptionKey: ${KIBANA_ENCRYPTION_KEY}
+    xpack.encryptedSavedObjects.encryptionKey: ${KIBANA_SO_KEY}
+    xpack.reporting.encryptionKey: ${KIBANA_REPORT_KEY}
 
 secretMounts:
   - name: elastic-certificates
