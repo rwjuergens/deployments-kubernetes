@@ -321,20 +321,15 @@ catalogs:
   tpcds: |
     connector.name=tpcds
     tpcds.splits-per-node=4
-  hive.properties: >
+  hive.properties: |
     connector.name=hive
     hive.metastore.uri=thrift://fom-hadoop-03.fritz.box:9083
     fs.hadoop.enabled=true
-    hive.config.resources=/hadoop/core-site.xml,/hadoop/hive-site.xml,/hadoop/yarn-site.xml,/hadoop/hdfs-site.xml,/hadoop/tez-site.xml
-
-    hive.recursive-directories=true
-  hudi.properties: >
+    hive.config.resources=/hadoop/core-site.xml,/hadoop/hive-site.xml,/hadoop/yarn-site.xml,/hadoop/hdfs-site.xml,/hadoop/tez-site.xml,/hadoop/mapred-site.xml
+  hudi.properties: |
     connector.name=hudi
-
     hive.metastore.uri=thrift://fom-hadoop-03.fritz.box:9083
-
     hive.config.resources=/hadoop/core-site.xml,/hadoop/hive-site.xml,/hadoop/yarn-site.xml,/hadoop/hdfs-site.xml,/hadoop/tez-site.xml
-
     fs.hadoop.enabled=true
   kafka.properties: |
     connector.name=kafka
