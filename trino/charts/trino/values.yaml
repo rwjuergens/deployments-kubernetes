@@ -321,7 +321,7 @@ catalogs:
   tpcds: |
     connector.name=tpcds
     tpcds.splits-per-node=4
-  hives: |
+  hive: |
     connector.name=hive
     hive.metastore.uri=thrift://fom-hadoop-03.fritz.box:9083
     fs.hadoop.enabled=true
